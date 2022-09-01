@@ -5,4 +5,5 @@ namespace src.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class PersonController{
+    
 }
