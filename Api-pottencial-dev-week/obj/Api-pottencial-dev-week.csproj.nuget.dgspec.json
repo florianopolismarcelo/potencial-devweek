@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\Api-pottencial-dev-week.csproj": {}
+    "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\api-pottencial-dev-week.csproj": {}
   },
   "projects": {
-    "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\Api-pottencial-dev-week.csproj": {
+    "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\api-pottencial-dev-week.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\Api-pottencial-dev-week.csproj",
-        "projectName": "Api-pottencial-dev-week",
-        "projectPath": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\Api-pottencial-dev-week.csproj",
+        "projectUniqueName": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\api-pottencial-dev-week.csproj",
+        "projectName": "api-pottencial-dev-week",
+        "projectPath": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\api-pottencial-dev-week.csproj",
         "packagesPath": "C:\\Users\\flori\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\obj\\",
         "projectStyle": "PackageReference",

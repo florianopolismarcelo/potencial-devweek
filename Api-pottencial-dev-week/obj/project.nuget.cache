@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CqkBZ4nRevc2FWoTxPdjYi3UxRjdx6Ui5GsdaEffBjTMWPIcf1JZCj0zMvuPEqwn9U4I9alAwXYKU7JCPEHpcg==",
+  "dgSpecHash": "q3P2yWxF6q6sDCenpyduku481KGUEpURpt5ZnGne1OFqszCsG26gooRDiulQhH0yO1gEP9L34pDGJrOfgo1DPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\Api-pottencial-dev-week.csproj",
+  "projectFilePath": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\api-pottencial-dev-week.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
