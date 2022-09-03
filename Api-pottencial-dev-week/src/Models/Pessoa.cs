@@ -1,14 +1,14 @@
 namespace src.Models;
 
-public class Person
+public class Pessoa
 {
-    public Person()
+    public Pessoa()
     {
         this.Nome = "template";
         this.Idade = 0;
     }
 
-    public Person (string Nome, int Idade, string Cpf){
+    public Pessoa (string Nome, int Idade, string Cpf){
         this.Nome = Nome;
         this.Idade = Idade;
         this.Cpf = Cpf;
