@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace src.Models;
 
 public class Pessoa
@@ -19,4 +20,5 @@ public class Pessoa
     public int Idade { get; set; }
     public string? Cpf { get; set; }
     public bool Ativado { get; set; }
-}
+    public List<Contrato> contratos;    
+    }
