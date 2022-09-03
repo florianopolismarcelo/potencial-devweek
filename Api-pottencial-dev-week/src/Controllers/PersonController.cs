@@ -5,11 +5,9 @@ namespace src.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PersonController : ControllerBase
-{
+public class PersonController : ControllerBase{
     [HttpGet]
-    public Person get()
-    {
+    public Person Get(){
         Person pessoa = new Person("marcelo", 45, "12345678");
         return pessoa;
     }
