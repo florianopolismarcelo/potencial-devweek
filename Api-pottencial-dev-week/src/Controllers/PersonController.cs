@@ -9,6 +9,8 @@ public class PersonController : ControllerBase{
     [HttpGet]
     public Pessoa Get(){
         Pessoa pessoa = new Pessoa("marcelo", 45, "12345678");
+        Contrato contrato = new Contrato();
+        pessoa.Contratos.Add(contrato);
         return pessoa;
     }
 }
