@@ -4,19 +4,19 @@ public class Person
 {
     public Person()
     {
-        this.nome = "template";
-        this.idade = 0;
+        this.Nome = "template";
+        this.Idade = 0;
     }
 
-    public Person (string nome, int idade, string cpf){
-        this.nome = nome;
-        this.idade = idade;
-        this.cpf = cpf;
+    public Person (string Nome, int Idade, string Cpf){
+        this.Nome = Nome;
+        this.Idade = Idade;
+        this.Cpf = Cpf;
 
     }
     //nome, idade, cpf, ativa
-    public string nome { get; set; }
-    public int idade { get; set; }
-    public string? cpf { get; set; }
-    public bool ativado { get; set; }
+    public string Nome { get; set; }
+    public int Idade { get; set; }
+    public string? Cpf { get; set; }
+    public bool Ativado { get; set; }
 }
