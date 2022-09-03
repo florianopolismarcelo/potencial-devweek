@@ -2,7 +2,14 @@ namespace src.Models;
 
 public class Contrato
 {
-    this.DataCriacao = DateTime.Now();
+    public Contrato()
+    {
+        this.DataCriacao = DateTime.Now;
+        this.Valor = 0;
+        this.tokenId = "000000";
+    }
+    public DateTime DataCriacao { get; set; }
+    public string tokenId { get; set; }
+    public double Valor { get; set; }
+
 }
-    public DateTime DataCriacao { get; set;}
-    public string tokenId {get; set;}
