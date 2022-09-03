@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
+using src.Models;
 
 namespace src.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PersonController  : ControllerBase
+public class PersonController : ControllerBase
 {
     [HttpGet]
-    public string Hello()
+    public Person get()
     {
-        return "ola Mar";
+        Person pessoa = new Person("marcelo", 45, "12345678");
+        return pessoa;
     }
-
 }
