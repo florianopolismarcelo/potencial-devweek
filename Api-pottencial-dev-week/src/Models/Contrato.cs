@@ -7,14 +7,18 @@ public class Contrato
         this.DataCriacao = DateTime.Now;
         this.Valor = 0;
         this.tokenId = "000000";
+        this.Pago = false;
     }
-    public Contrato( string TokenID, double Valor){
+    public Contrato(string TokenID, double Valor)
+    {
         this.DataCriacao = DateTime.Now;
         this.tokenId = TokenID;
         this.Valor = Valor;
+        this.Pago = false;
     }
     public DateTime DataCriacao { get; set; }
     public string tokenId { get; set; }
     public double Valor { get; set; }
+    public bool Pago { get; set; }
 
 }
