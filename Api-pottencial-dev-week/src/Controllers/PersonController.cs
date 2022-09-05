@@ -17,14 +17,20 @@ public class PersonController : ControllerBase
         return pessoa;
     }
     [HttpPost]
-    public Pessoa Post(Pessoa pessoa){
+    public Pessoa Post([FromBody] Pessoa pessoa)
+    {
         return pessoa;
     }
     [HttpPut("{id}")]
-    public string Updata([FromRoute]int id, [FromBody]Pessoa pessoa){
+    public string Updata([FromRoute] int id, [FromBody] Pessoa pessoa)
+    {
         Console.WriteLine(id);
         Console.WriteLine(pessoa);
-
         return "Dados do id" + id + "atualizados";
+    }
+    [HttpDelete("{id}")]
+    public string Delete([FromRoute] int id)
+    {
+        return "deletando pessoa de Id " + id;
     }
 }
