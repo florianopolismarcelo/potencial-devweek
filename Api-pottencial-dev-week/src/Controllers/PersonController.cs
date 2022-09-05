@@ -13,8 +13,7 @@ public class PersonController : ControllerBase
         Pessoa pessoa = new Pessoa("marcelo", 45, "12345678");
         Contrato novocontrato = new Contrato("abc123", 50.46);
         pessoa.Contratos.Add(novocontrato);
-        pessoa.Contratos.Add(novocontrato);
-        pessoa.Contratos.Add(novocontrato);
+
 
         return pessoa;
     }
