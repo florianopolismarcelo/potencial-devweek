@@ -20,8 +20,11 @@ public class PersonController : ControllerBase
     public Pessoa Post(Pessoa pessoa){
         return pessoa;
     }
-    [HttpPut]
-    public string Updata(int id){
+    [HttpPut("{id}")]
+    public string Updata([FromRoute]int id, [FromBody]Pessoa pessoa){
+        Console.WriteLine(id);
+        Console.WriteLine(pessoa);
+
         return "Dados do id" + id + "atualizados";
     }
 }
