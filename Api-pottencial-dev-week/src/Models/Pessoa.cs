@@ -8,12 +8,16 @@ public class Pessoa
         this.Nome = "template";
         this.Idade = 0;
         this.Contratos = new List<Contrato>();
+        this.Ativado = true;
     }
     public Pessoa(string Nome, int Idade, string Cpf)
     {
         this.Nome = Nome;
         this.Idade = Idade;
         this.Cpf = Cpf;
+        this.Contratos = new List<Contrato>();
+        this.Ativado = true;
+
     }
     //nome, idade, cpf, ativa
     public string Nome { get; set; }
