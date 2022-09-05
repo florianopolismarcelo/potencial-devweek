@@ -14,7 +14,10 @@ public class PersonController : ControllerBase
         Contrato novocontrato = new Contrato("abc123", 50.46);
         pessoa.Contratos.Add(novocontrato);
 
-
+        return pessoa;
+    }
+    [HttpPost]
+    public Pessoa Post(Pessoa pessoa){
         return pessoa;
     }
 }
