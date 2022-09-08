@@ -16,10 +16,13 @@ public class DatabaseContext : DbContext
 
     public DbSet<Contrato> Contratos { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder builder)
+    protected override void OnModelCreating(ModelBuilder 
+    builder)
     {
-        builder.Entity<Pessoa>(e =>
+        builder.Entity<Pessoa>(tabela =>
         {
+            tabela.HasKey( e => e.Id);
+
         });
         builder.Entity<Contrato>(e =>
         {
