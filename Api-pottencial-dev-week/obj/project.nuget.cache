@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NDCGsf0gToqtinSVNm0IdMWT7RoBepuJy//HIJhEG+iwxepSlX+CLSaPNZ/+XQxX1CxCX/s2/lVXaVQqdfIXWw==",
+  "dgSpecHash": "4tDwWpQuHPMGmzgikAnCQdAHAlytrmE1xI9ZpZa2IdfeMkL+CFDB/DWKoy8k68vu/kNg2+Mtc1QdPP5epuWVqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\flori\\source\\repos\\PotencialDevWeek\\Api-pottencial-dev-week\\api-pottencial-dev-week.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.8\\microsoft.entityframeworkcore.abstractions.6.0.8.nupkg.sha512",
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.8\\microsoft.entityframeworkcore.analyzers.6.0.8.nupkg.sha512",
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.8\\microsoft.entityframeworkcore.design.6.0.8.nupkg.sha512",
+    "C:\\Users\\flori\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\6.0.8\\microsoft.entityframeworkcore.inmemory.6.0.8.nupkg.sha512",
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.8\\microsoft.entityframeworkcore.relational.6.0.8.nupkg.sha512",
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\flori\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
