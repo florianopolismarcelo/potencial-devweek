@@ -19,14 +19,12 @@ public class DatabaseContext : DbContext
     protected override void OnModelCreating(ModelBuilder 
     builder)
     {
-        builder.Entity<Pessoa>(tabela =>
-        {
+        builder.Entity<Pessoa>(tabela =>{
             tabela.HasKey( e => e.Id);
 
         });
-        builder.Entity<Contrato>(e =>
-        {
-
+        builder.Entity<Contrato>(e => {
+            tabela.HasKey( e => e.Id);
         });
     }
 
