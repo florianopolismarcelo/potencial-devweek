@@ -12,11 +12,12 @@ public class DatabaseContext : DbContext
     {
 
     }
-    public int DbSet<Pessoa> Pessoas { get; set; }
+    public DbSet<Pessoa> Pessoas { get; set; }
 
-    public int DbSet<Contrato> Contratos { get; set; }
+    public DbSet<Contrato> Contratos { get; set; }
 
-    protected void OnModelCreating(ModelBuilder builder){
+    protected void OnModelCreating(ModelBuilder builder)
+    {
 
     }
 }
