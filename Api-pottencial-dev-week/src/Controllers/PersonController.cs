@@ -5,8 +5,10 @@ namespace src.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PersonController : ControllerBase
-{
+public class PersonController : ControllerBase{
+
+    private DatabaseContext _repository { get; set; }
+    
     [HttpGet]
     public Pessoa Get()
     {
