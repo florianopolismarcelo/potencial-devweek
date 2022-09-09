@@ -21,5 +21,5 @@ public class Contrato
     public string tokenId { get; set; }
     public double Valor { get; set; }
     public bool Pago { get; set; }
-
+    public int PessoaId { get; set; }
 }
