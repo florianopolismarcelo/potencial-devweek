@@ -13,7 +13,6 @@ public class DatabaseContext : DbContext
 
     }
     public DbSet<Pessoa> Pessoas { get; set; }
-
     public DbSet<Contrato> Contratos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder){
