@@ -9,7 +9,12 @@ namespace src.Controllers;
 [Route("[controller]")]
 public class PersonController : ControllerBase{
 
-    private DatabaseContext _contex { get; set; }
+    private DatabaseContext _context { get; set; }
+
+    public PersonController(DatabaseContext context)
+    {
+        this._context = context;
+    }
     
     [HttpGet]
     public Pessoa Get()
