@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using src.Models;
+using Microsoft.EntityFrameworkCore;
 using src.Persistence;
 
 namespace src.Controllers;
@@ -8,7 +9,7 @@ namespace src.Controllers;
 [Route("[controller]")]
 public class PersonController : ControllerBase{
 
-    private DatabaseContext _repository { get; set; }
+    private DatabaseContext _contex { get; set; }
     
     [HttpGet]
     public Pessoa Get()
