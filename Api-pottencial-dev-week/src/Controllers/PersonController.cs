@@ -24,7 +24,7 @@ public class PersonController : ControllerBase
         // Contrato novocontrato = new Contrato("abc123", 50.46);
         //pessoa.Contratos.Add(novocontrato);
 
-        return _context.Pessoas.ToList();
+        return _context.Pessoas.Include(p => p.Contratos).ToList();
         //return pessoa;
     }
     [HttpPost]
@@ -40,9 +40,10 @@ public class PersonController : ControllerBase
     {
         _context.Pessoas.Update(pessoa);
         _context.SaveChanges();
+        return "Dados do id" + id + "atualizados";
+
         //Console.WriteLine(id);
        // Console.WriteLine(pessoa);
-        return "Dados do id" + id + "atualizados";
     }
     [HttpDelete("{id}")]
     public string Delete([FromRoute] int id)

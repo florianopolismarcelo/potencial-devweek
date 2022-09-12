@@ -5,7 +5,7 @@ namespace src.Persistence;
 
 public class DatabaseContext : DbContext
 {
-    public DatabaseContex
+    public DatabaseContext
     (
         DbContextOptions<DatabaseContext> options
         ) : base(options)

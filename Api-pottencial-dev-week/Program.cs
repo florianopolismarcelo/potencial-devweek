@@ -5,11 +5,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder
-.Services.AddDbContext<DatabaseContex>(o => o.
+.Services.AddDbContext<DatabaseContext>(o => o.
 UseInMemoryDatabase("dbContracts"));
 
 builder.Services.AddScoped<DatabaseContext, 
-DatabaseContex>();
+DatabaseContext>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
