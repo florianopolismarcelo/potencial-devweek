@@ -7,7 +7,8 @@ namespace src.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PersonController : ControllerBase{
+public class PersonController : ControllerBase
+{
 
     private DatabaseContext _context { get; set; }
 
@@ -15,14 +16,15 @@ public class PersonController : ControllerBase{
     {
         this._context = context;
     }
-    
+
     [HttpGet]
     public Pessoa Get()
     {
-        Pessoa pessoa = new Pessoa("marcelo", 45, "12345678");
-        Contrato novocontrato = new Contrato("abc123", 50.46);
-        pessoa.Contratos.Add(novocontrato);
+        // Pessoa pessoa = new Pessoa("marcelo", 45, "12345678");
+        // Contrato novocontrato = new Contrato("abc123", 50.46);
+        //pessoa.Contratos.Add(novocontrato);
 
+        return _context.Pessoas.ToList();
         return pessoa;
     }
     [HttpPost]
@@ -30,7 +32,7 @@ public class PersonController : ControllerBase{
     {
         _context.Pessoas.Add(pessoa);
         _context.SaveChanges();
-        
+
         return pessoa;
     }
     [HttpPut("{id}")]
