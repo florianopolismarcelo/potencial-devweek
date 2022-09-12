@@ -28,6 +28,9 @@ public class PersonController : ControllerBase{
     [HttpPost]
     public Pessoa Post([FromBody] Pessoa pessoa)
     {
+        _context.Pessoas.Add(pessoa);
+        _context.SaveChanges();
+        
         return pessoa;
     }
     [HttpPut("{id}")]
