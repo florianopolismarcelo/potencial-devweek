@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using src.Models;
+
 using Microsoft.EntityFrameworkCore;
 using src.Persistence;
 
@@ -46,10 +47,8 @@ public class PersonController : ControllerBase
        // Console.WriteLine(pessoa);
     }
     [HttpDelete("{id}")]
-    public string Delete([FromRoute] int id)
-    {
-        //public string Delete([FromRoute] int id){
-            var result = _context.Pessoas.SingleOrDefault (e => e.Id == id)
+    public string Delete([FromRoute] int id){
+            var result = _context.Pessoas.SingleOrDefault (e => e.Id == id);
 
             _context.Pessoas.Remove(result);
             _context.SaveChanges();
