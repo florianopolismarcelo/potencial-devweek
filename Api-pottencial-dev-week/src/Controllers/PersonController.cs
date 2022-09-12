@@ -48,7 +48,7 @@ public class PersonController : ControllerBase
     [HttpDelete("{id}")]
     public string Delete([FromRoute] int id)
     {
-        public string Delete([FromRoute] int id){
+        //public string Delete([FromRoute] int id){
             var result = _context.Pessoas.SingleOrDefault (e => e.Id == id)
 
             _context.Pessoas.Remove(result);
@@ -57,4 +57,3 @@ public class PersonController : ControllerBase
         return "deletando pessoa de Id " + id;
         }
     }
-}
