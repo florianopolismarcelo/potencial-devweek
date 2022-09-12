@@ -36,15 +36,24 @@ public class PersonController : ControllerBase
         return pessoa;
     }
     [HttpPut("{id}")]
-    public string Updata([FromRoute] int id, [FromBody] Pessoa pessoa)
+    public string Update([FromRoute] int id, [FromBody] Pessoa pessoa)
     {
-        Console.WriteLine(id);
-        Console.WriteLine(pessoa);
+        _context.Pessoas.Update(pessoa);
+        _context.SaveChanges();
+        //Console.WriteLine(id);
+       // Console.WriteLine(pessoa);
         return "Dados do id" + id + "atualizados";
     }
     [HttpDelete("{id}")]
     public string Delete([FromRoute] int id)
     {
+        public string Delete([FromRoute] int id){
+            var result = _context.Pessoas.SingleOrDefault (e => e.Id == id)
+
+            _context.Pessoas.Remove(result);
+            _context.SaveChanges();
+        
         return "deletando pessoa de Id " + id;
+        }
     }
 }
