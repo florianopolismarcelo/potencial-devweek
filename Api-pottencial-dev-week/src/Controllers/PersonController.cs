@@ -29,6 +29,11 @@ public class PersonController : ControllerBase
 
         //return _context.Pessoas.Include(p => p.Contratos).ToList();
         //return pessoa;
+        var result = _context.Pessoas.Include( p => p.contratos).ToList();
+        if (result is null){
+            return NoContent();
+            
+        }
     }
     [HttpPost]
     public Pessoa Post([FromBody] Pessoa pessoa)
