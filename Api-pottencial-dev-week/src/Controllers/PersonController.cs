@@ -29,11 +29,11 @@ public class PersonController : ControllerBase
 
         //return _context.Pessoas.Include(p => p.Contratos).ToList();
         //return pessoa;
-        var result = _context.Pessoas.Include( p => p.contratos).ToList();
+        var result = _context.Pessoas.Include( p => p.Contratos).ToList();
         if (result is null){
             return NoContent();
-            
         }
+        return Ok(result);
     }
     [HttpPost]
     public Pessoa Post([FromBody] Pessoa pessoa)
@@ -63,7 +63,7 @@ public class PersonController : ControllerBase
     //     return "deletando pessoa de Id " + id;
     //     }
     public ActionResult Delete([FromRoute] int id){
-        return NotFound()
+        return NotFound();
     }
     
     }
