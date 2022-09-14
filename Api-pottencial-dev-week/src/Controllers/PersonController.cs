@@ -30,7 +30,7 @@ public class PersonController : ControllerBase
         //return _context.Pessoas.Include(p => p.Contratos).ToList();
         //return pessoa;
         var result = _context.Pessoas.Include( p => p.Contratos).ToList();
-        if (result is null){
+        if (!result.Any()){
             return NoContent();
         }
         return Ok(result);
