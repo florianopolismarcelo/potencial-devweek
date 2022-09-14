@@ -21,6 +21,7 @@ public class PersonController : ControllerBase
     [HttpGet]
     public List<Pessoa> Get()
     {
+        //Ok - 200, NotContent 204
         // Pessoa pessoa = new Pessoa("marcelo", 45, "12345678");
         // Contrato novocontrato = new Contrato("abc123", 50.46);
         //pessoa.Contratos.Add(novocontrato);
