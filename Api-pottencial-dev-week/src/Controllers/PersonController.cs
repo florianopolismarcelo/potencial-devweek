@@ -53,10 +53,10 @@ public class PersonController : ControllerBase
     }
     [HttpDelete("{id}")]
 
-    public ActionResult<object> Delete([FromRoute]) int id){
-        var result = _context.Pessoas.SingleOrDefault(e => e.Id == is);
+    public ActionResult<Object> Delete([FromRoute] int id){
+        var result = _context.Pessoas.SingleOrDefault(e => e.Id == id);
 
-        if (Result is null){
+        if (result is null){
          return BadRequest(new {
             msg = "Conteúdo inixistente, solicitação inválida",
             status = 400
