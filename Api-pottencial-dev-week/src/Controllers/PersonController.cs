@@ -61,8 +61,6 @@ public class PersonController : ControllerBase
             msg = "Conteúdo inixistente, solicitação inválida",
             status = 400
          });
-        
-        
     }
     // public string Delete([FromRoute] int id){
     //         var result = _context.Pessoas.SingleOrDefault (e => e.Id == id);
