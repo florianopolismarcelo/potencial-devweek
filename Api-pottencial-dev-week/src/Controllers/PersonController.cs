@@ -52,16 +52,28 @@ public class PersonController : ControllerBase
        // Console.WriteLine(pessoa);
     }
     [HttpDelete("{id}")]
-    public string Delete([FromRoute] int id){
-            var result = _context.Pessoas.SingleOrDefault (e => e.Id == id);
 
-            _context.Pessoas.Remove(result);
-            _context.SaveChanges();
+    public ActionResult<object> Delete([FromRoute]) int id){
+        var result = _context.Pessoas.SingleOrDefault(e => e.Id == is);
+
+        if (Result is null){
+         return BadRequest(new {
+            msg = "Conteúdo inixistente, solicitação inválida",
+            status = 400
+         });
         
-        return "deletando pessoa de Id " + id;
+        
+    }
+    // public string Delete([FromRoute] int id){
+    //         var result = _context.Pessoas.SingleOrDefault (e => e.Id == id);
+
+    //         _context.Pessoas.Remove(result);
+    //         _context.SaveChanges();
+        
+        return Ok("deletando pessoa de Id " + id);
         }
     // public ActionResult Delete([FromRoute] int id){
     //     return NotFound();
     // }
     
-    }
+}
