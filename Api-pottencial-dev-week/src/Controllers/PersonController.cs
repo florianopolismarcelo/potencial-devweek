@@ -3,6 +3,7 @@ using src.Models;
 
 using Microsoft.EntityFrameworkCore;
 using src.Persistence;
+using System.Net;
 
 namespace src.Controllers;
 
@@ -59,7 +60,8 @@ public class PersonController : ControllerBase
         if (result is null){
          return BadRequest(new {
             msg = "Conteúdo inixistente, solicitação inválida",
-            status = 400
+            //status = 400
+            status = HttpStatusCode.BadRequest
          });
     }
     // public string Delete([FromRoute] int id){
@@ -69,7 +71,10 @@ public class PersonController : ControllerBase
              _context.SaveChanges();
         
         return Ok(new {
-            msg = "deletando pessoa de Id " + id
+            msg = "deletando pessoa de Id " + id,
+            //status = 200
+            status = HttpStatusCode.OK
+
     });
         }
     }
