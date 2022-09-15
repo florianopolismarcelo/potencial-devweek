@@ -65,13 +65,16 @@ public class PersonController : ControllerBase
     // public string Delete([FromRoute] int id){
     //         var result = _context.Pessoas.SingleOrDefault (e => e.Id == id);
 
-    //         _context.Pessoas.Remove(result);
-    //         _context.SaveChanges();
+             _context.Pessoas.Remove(result);
+             _context.SaveChanges();
         
-        return Ok("deletando pessoa de Id " + id);
+        return Ok(new {
+            msg = "deletando pessoa de Id " + id
+    });
         }
+    }
     // public ActionResult Delete([FromRoute] int id){
     //     return NotFound();
     // }
     
-}
+
