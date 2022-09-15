@@ -31,7 +31,6 @@ public class PersonController : ControllerBase
         //return pessoa;
         var result = _context.Pessoas.Include( p => p.Contratos).ToList();
         if (!result.Any()) return NoContent();
-        
         return Ok(result);
     }
     [HttpPost]
@@ -53,16 +52,16 @@ public class PersonController : ControllerBase
        // Console.WriteLine(pessoa);
     }
     [HttpDelete("{id}")]
-    // public string Delete([FromRoute] int id){
-    //         var result = _context.Pessoas.SingleOrDefault (e => e.Id == id);
+    public string Delete([FromRoute] int id){
+            var result = _context.Pessoas.SingleOrDefault (e => e.Id == id);
 
-    //         _context.Pessoas.Remove(result);
-    //         _context.SaveChanges();
+            _context.Pessoas.Remove(result);
+            _context.SaveChanges();
         
-    //     return "deletando pessoa de Id " + id;
-    //     }
-    public ActionResult Delete([FromRoute] int id){
-        return NotFound();
-    }
+        return "deletando pessoa de Id " + id;
+        }
+    // public ActionResult Delete([FromRoute] int id){
+    //     return NotFound();
+    // }
     
     }
