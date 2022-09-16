@@ -35,17 +35,25 @@ public class PersonController : ControllerBase
         return Ok(result);
     }
     [HttpPost]
-    public Pessoa Post([FromBody] Pessoa pessoa)
+    public ActionResult <Pessoa> Post([FromBody] Pessoa pessoa)
     {
         _context.Pessoas.Add(pessoa);
         _context.SaveChanges();
 
-        return pessoa;
+        return Created ("Criado", pessoa);
     }
+    // public Pessoa Post([FromBody] Pessoa pessoa)
+    // {
+    //     _context.Pessoas.Add(pessoa);
+    //     _context.SaveChanges();
+
+    //     return pessoa;
+    // }
 
     [HttpPut("{id}")]
+    //public ActionResult<Object> Delete([FromRoute] int id){
     public ActionResult<Object> Update(
-        [FromRoute] int id, 
+        [FromRoute]int id, 
         [FromBody]Pessoa pessoa
         )
     {
