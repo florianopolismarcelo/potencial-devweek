@@ -50,7 +50,11 @@ public class PersonController : ControllerBase
     {
         _context.Pessoas.Update(pessoa);
         _context.SaveChanges();
-        return "Dados do id" + id + "atualizados";
+
+        return Ok (new {
+            msg = "Dados do id" + id + "atualizados",
+            status = HttpStatusCode.OK
+        });
 
     // public string Update([FromRoute] int id, [FromBody] Pessoa pessoa)
     // {
