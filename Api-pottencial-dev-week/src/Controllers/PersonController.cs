@@ -52,7 +52,7 @@ public class PersonController : ControllerBase
         var result = _context.Pessoas.SingleOrDefault(e => e.Id == id);
         
         if (result is null){
-            return NotFound(new Object{
+            return NotFound(new {
                 msg = "Registro não encontrado",
                 status = HttpStatusCode.NotFound
             });
