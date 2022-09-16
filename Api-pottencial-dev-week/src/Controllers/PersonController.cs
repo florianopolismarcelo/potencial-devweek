@@ -43,11 +43,20 @@ public class PersonController : ControllerBase
         return pessoa;
     }
     [HttpPut("{id}")]
-    public string Update([FromRoute] int id, [FromBody] Pessoa pessoa)
+    public ActionResult<object> Update(
+        [FromRoute] int id, 
+        [FromBody] Pessoa pessoa
+        )
     {
         _context.Pessoas.Update(pessoa);
         _context.SaveChanges();
         return "Dados do id" + id + "atualizados";
+
+    // public string Update([FromRoute] int id, [FromBody] Pessoa pessoa)
+    // {
+    //     _context.Pessoas.Update(pessoa);
+    //     _context.SaveChanges();
+    //     return "Dados do id" + id + "atualizados";
 
         //Console.WriteLine(id);
        // Console.WriteLine(pessoa);
