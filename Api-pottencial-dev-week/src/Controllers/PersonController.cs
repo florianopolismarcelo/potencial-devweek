@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using src.Models;
-
 using Microsoft.EntityFrameworkCore;
-using src.Persistence;
 using System.Net;
+
+using src.Models;
+using src.Persistence;
 
 namespace src.Controllers;
 
