@@ -48,14 +48,20 @@ public class PersonController : ControllerBase
         [FromBody] Pessoa pessoa
         )
     {
-        _context.Pessoas.Update(pessoa);
-        _context.SaveChanges();
-
-        return Ok (new {
-            msg = "Dados do id" + id + "atualizados",
+        try
+        {
+         _context.Pessoas.Update(pessoa);
+         _context.SaveChanges();
+        }
+        catch (SystemException)
+        {
+            return Ok (new {
+            msg = "Houve erro ao enviar solicitação de atualização do" 
+            + id + "atualizados",
             status = HttpStatusCode.OK
         });
-
+        
+        }
     // public string Update([FromRoute] int id, [FromBody] Pessoa pessoa)
     // {
     //     _context.Pessoas.Update(pessoa);
