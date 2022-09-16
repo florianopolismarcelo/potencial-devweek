@@ -42,25 +42,33 @@ public class PersonController : ControllerBase
 
         return pessoa;
     }
+
     [HttpPut("{id}")]
-    public ActionResult<object> Update(
+    public ActionResult<Object> Update(
         [FromRoute] int id, 
-        [FromBody] Pessoa pessoa
+        [FromBody]Pessoa pessoa
         )
     {
+        var result = _context.Pessoas.SingleOrDefault(e => e.Id == id);
+        
+        if (result is null){
+            return NotFound(new Object{
+                msg = "Registro não encontrado",
+                status = HttpStatusCode.NotFound
+            });
+        }
         try
         {
          _context.Pessoas.Update(pessoa);
          _context.SaveChanges();
         }
-        catch (SystemException)
+        catch (System.Exception)
         {
-            return Ok (new {
+            return BadRequest(new {
             msg = "Houve erro ao enviar solicitação de atualização do" 
             + id + "atualizados",
             status = HttpStatusCode.OK
-        });
-        
+          }); 
         }
     // public string Update([FromRoute] int id, [FromBody] Pessoa pessoa)
     // {
