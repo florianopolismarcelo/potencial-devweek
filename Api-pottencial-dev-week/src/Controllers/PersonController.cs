@@ -92,7 +92,7 @@ public class PersonController : ControllerBase
 
         //Console.WriteLine(id);
        // Console.WriteLine(pessoa);
-    }
+    
     [HttpDelete("{id}")]
 
     public ActionResult<Object> Delete([FromRoute] int id){
@@ -115,10 +115,9 @@ public class PersonController : ControllerBase
             msg = "deletando pessoa de Id " + id,
             //status = 200
             status = HttpStatusCode.OK
-
-    });
-        }
+        });
     }
+}
     // public ActionResult Delete([FromRoute] int id){
     //     return NotFound();
     // }
