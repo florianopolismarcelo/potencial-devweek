@@ -78,6 +78,11 @@ public class PersonController : ControllerBase
             status = HttpStatusCode.OK
           }); 
         }
+        return Ok(new Object{
+            msg = $"Dados do id {id} atualizados",
+            status = HttpStatusCode.OK
+        });
+    }
     // public string Update([FromRoute] int id, [FromBody] Pessoa pessoa)
     // {
     //     _context.Pessoas.Update(pessoa);
