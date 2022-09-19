@@ -10,8 +10,7 @@
 
 
 
-# Verificar a implementação abaixo com o código existente e verificar o que está dando erro, após 
-# resolver o erro colocar o código no PersonController.cs 
+# Verificar a implementação abaixo com o código existente e verificar o que está dando erro, após  resolver o erro colocar o código no PersonController.cs 
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
