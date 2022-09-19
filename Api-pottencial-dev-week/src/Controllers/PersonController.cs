@@ -36,7 +36,7 @@ public class PersonController : ControllerBase
     }
     [HttpPost]
     public ActionResult <Pessoa> Post([FromBody] Pessoa pessoa)
-    
+   
     {
         _context.Pessoas.Add(pessoa);
         _context.SaveChanges();
